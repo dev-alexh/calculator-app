@@ -160,7 +160,7 @@ export class Calculator extends React.Component {
 
     resultCalculation() {
         this.setState((state) => {
-            if (state.actualCalc !== "") {
+            if (state.actualCalc !== "" && !state.actualCalc.endsWith(".")) {
                 const result = math.evaluate(state.actualCalc).toString();
                 return {
                     number: result,
