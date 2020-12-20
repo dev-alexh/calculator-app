@@ -113,12 +113,47 @@ export class Calculator extends React.Component {
     decimalNum() {
         this.setState((state) => {
             if (!state.number.includes(".")) {
-                return {
-                    number: state.number + ".",
-                    operation: "",
-                    display: state.display + ".",
-                    actualCalc: state.actualCalc + "."
-                };
+                if (state.operation != "") {
+                    const operArr = state.operation.split("");
+                    if (operArr.length > 1) {
+                        if (operArr[operArr.length - 1] == "-") {
+                            return {
+                                number: state.number + ".",
+                                operation: "",
+                                display: state.display + ".",
+                                actualCalc:
+                                    state.actualCalc +
+                                    operArr[operArr.length - 2] +
+                                    operArr[operArr.length - 1] +
+                                    "."
+                            };
+                        } else {
+                            return {
+                                number: state.number + ".",
+                                operation: "",
+                                display: state.display + ".",
+                                actualCalc:
+                                    state.actualCalc + operArr[operArr.length - 1] + "."
+                            };
+                        }
+                    } else {
+                        return {
+                            number: state.number + ".",
+                            operation: "",
+                            display: state.display + ".",
+                            actualCalc: state.actualCalc + state.operation + "."
+                        };
+                    }
+                }
+
+                else {
+                    return {
+                        number: state.number + ".",
+                        operation: "",
+                        display: state.display + ".",
+                        actualCalc: state.actualCalc + "."
+                    };
+                }
             }
         });
     }
