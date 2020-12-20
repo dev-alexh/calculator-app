@@ -29,10 +29,6 @@ h1 {
   font-family: "Orbitron", "Open Sans", Arial;
 }
 
-Button:hover {
-  opacity: 80%;
-}
-
 #zero,
 #one,
 #two,
