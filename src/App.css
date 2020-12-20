@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
+body {
+  font-family: "Open Sans", Arial !important;
+  margin: 0;
+  font-size: 0.9em;
+  background-color: #f1f7ed !important;
+}
+
+#calculator-box {
+  padding: 70px 15% 70px 15%;
+}
+
+h1 {
+  margin: 100px 0px 0px 0px !important;
+  text-align: center;
+}
+
+#displayScreen {
+  border: solid;
+  border-width: thin;
+  border-color: #cccccc;
+  border-radius: 15px;
+  margin: 0;
+  background-color: white;
+  text-align: right;
+  font-family: "Orbitron", "Open Sans", Arial;
+}
+
+Button:hover {
+  opacity: 80%;
+}
+
+#zero,
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#decimal {
+  background-color: #dedbd8;
+  color: black;
+}
+
+#add,
+#subtract,
+#multiply,
+#divide {
+  background-color: #ff9505;
+  color: black;
+}
+
+#clear {
+  background-color: #bf1a2f;
+  color: white;
+  font-weight: bold;
+}
+
+#equals {
+  background-color: #274156;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  text-align: right;
+  font-size: 0.8em;
+  border-top: solid;
+  border-top-color: #cccccc;
+  border-top-width: thin;
+  padding: 10px 0px 0px 0px;
+}
+
+@media (min-width: 768px) {
+  #calculator-box {
+    padding: 70px 25% 70px 25%;
+  }
+}
