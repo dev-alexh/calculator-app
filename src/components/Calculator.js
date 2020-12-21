@@ -14,7 +14,7 @@ export class Calculator extends React.Component {
             number: "0",
             operation: "",
             display: "0",
-            actualCalc: ""
+            actualCalc: "0"
         };
 
         this.constructNum = this.constructNum.bind(this);
@@ -85,7 +85,7 @@ export class Calculator extends React.Component {
             number: "0",
             operation: "",
             display: "0",
-            actualCalc: ""
+            actualCalc: "0"
         });
     }
 
