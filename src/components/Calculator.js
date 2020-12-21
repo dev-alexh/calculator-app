@@ -65,7 +65,7 @@ export class Calculator extends React.Component {
                     return {
                         number: inputStr,
                         operation: "",
-                        display: state.display + inputStr,
+                        display: state.display.substring(0, state.display.length - 1) + inputStr,
                         actualCalc: state.actualCalc + inputStr
                     };
                 }
